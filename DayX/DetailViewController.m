@@ -10,6 +10,7 @@
 
 @interface DetailViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *detailTextField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 
 @end
@@ -28,7 +29,13 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     
+    [textField resignFirstResponder];
     return YES;
+    
+}
+- (IBAction)clearTextViewButton:(id)sender {
+    
+    self.textView.text = @"";
     
 }
 /*
