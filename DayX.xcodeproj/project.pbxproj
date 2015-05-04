@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		68FFDFDC1AD8144B009F5D0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFDFDB1AD8144B009F5D0A /* main.m */; };
 		68FFDFDF1AD8144B009F5D0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFDFDE1AD8144B009F5D0A /* AppDelegate.m */; };
-		68FFDFE21AD8144B009F5D0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFDFE11AD8144B009F5D0A /* ViewController.m */; };
+		68FFDFE21AD8144B009F5D0A /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFDFE11AD8144B009F5D0A /* ListViewController.m */; };
 		68FFDFE51AD8144B009F5D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68FFDFE31AD8144B009F5D0A /* Main.storyboard */; };
 		68FFDFE71AD8144B009F5D0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FFDFE61AD8144B009F5D0A /* Images.xcassets */; };
 		68FFDFEA1AD8144B009F5D0A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FFDFE81AD8144B009F5D0A /* LaunchScreen.xib */; };
 		68FFDFF61AD8144B009F5D0A /* DayXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFDFF51AD8144B009F5D0A /* DayXTests.m */; };
+		872C91771AF81B5100B75862 /* ListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 872C91761AF81B5100B75862 /* ListTableViewDataSource.m */; };
+		872C917A1AF8238400B75862 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872C91791AF8238400B75862 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		68FFDFDB1AD8144B009F5D0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68FFDFDD1AD8144B009F5D0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68FFDFDE1AD8144B009F5D0A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		68FFDFE01AD8144B009F5D0A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		68FFDFE11AD8144B009F5D0A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		68FFDFE01AD8144B009F5D0A /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		68FFDFE11AD8144B009F5D0A /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		68FFDFE41AD8144B009F5D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68FFDFE61AD8144B009F5D0A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		68FFDFE91AD8144B009F5D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		68FFDFEF1AD8144B009F5D0A /* DayXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DayXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FFDFF41AD8144B009F5D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68FFDFF51AD8144B009F5D0A /* DayXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayXTests.m; sourceTree = "<group>"; };
+		872C91751AF81B5100B75862 /* ListTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewDataSource.h; sourceTree = "<group>"; };
+		872C91761AF81B5100B75862 /* ListTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewDataSource.m; sourceTree = "<group>"; };
+		872C91781AF8238400B75862 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		872C91791AF8238400B75862 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +89,13 @@
 			children = (
 				68FFDFDD1AD8144B009F5D0A /* AppDelegate.h */,
 				68FFDFDE1AD8144B009F5D0A /* AppDelegate.m */,
-				68FFDFE01AD8144B009F5D0A /* ViewController.h */,
-				68FFDFE11AD8144B009F5D0A /* ViewController.m */,
+				68FFDFE01AD8144B009F5D0A /* ListViewController.h */,
+				68FFDFE11AD8144B009F5D0A /* ListViewController.m */,
 				68FFDFE31AD8144B009F5D0A /* Main.storyboard */,
+				872C91781AF8238400B75862 /* DetailViewController.h */,
+				872C91791AF8238400B75862 /* DetailViewController.m */,
+				872C91751AF81B5100B75862 /* ListTableViewDataSource.h */,
+				872C91761AF81B5100B75862 /* ListTableViewDataSource.m */,
 				68FFDFE61AD8144B009F5D0A /* Images.xcassets */,
 				68FFDFE81AD8144B009F5D0A /* LaunchScreen.xib */,
 				68FFDFD91AD8144B009F5D0A /* Supporting Files */,
@@ -219,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68FFDFE21AD8144B009F5D0A /* ViewController.m in Sources */,
+				872C917A1AF8238400B75862 /* DetailViewController.m in Sources */,
+				68FFDFE21AD8144B009F5D0A /* ListViewController.m in Sources */,
 				68FFDFDF1AD8144B009F5D0A /* AppDelegate.m in Sources */,
+				872C91771AF81B5100B75862 /* ListTableViewDataSource.m in Sources */,
 				68FFDFDC1AD8144B009F5D0A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +428,7 @@
 				68FFDFFB1AD8144B009F5D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68FFDFFC1AD8144B009F5D0A /* Build configuration list for PBXNativeTarget "DayXTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +437,7 @@
 				68FFDFFE1AD8144B009F5D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
