@@ -21,7 +21,7 @@
                                 <rect key="frame" x="-10" y="45" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" id="wLQ-gr-0VW">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="entryCell" id="wLQ-gr-0VW">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wLQ-gr-0VW" id="2kt-hk-xfu">
@@ -81,16 +81,20 @@
                                     <outlet property="delegate" destination="eaF-yl-nfz" id="hLo-r3-Khq"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NxP-zx-MW2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NxP-zx-MW2">
                                 <rect key="frame" x="125" y="179" width="350" height="245"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="LpV-kf-LSS"/>
+                                    <constraint firstAttribute="height" constant="245" id="NKV-Nj-Jti"/>
+                                </constraints>
                                 <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4m-4U-mbv">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4m-4U-mbv">
                                 <rect key="frame" x="277" y="446" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -100,10 +104,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NxP-zx-MW2" firstAttribute="centerX" secondItem="4eM-7u-PZf" secondAttribute="centerX" id="3ZB-Ik-Etk"/>
+                            <constraint firstItem="NxP-zx-MW2" firstAttribute="top" secondItem="4eM-7u-PZf" secondAttribute="bottom" constant="52" id="NpR-LL-ZGU"/>
+                            <constraint firstItem="NxP-zx-MW2" firstAttribute="centerX" secondItem="j4m-4U-mbv" secondAttribute="centerX" id="UcV-oP-NSc"/>
                             <constraint firstItem="4eM-7u-PZf" firstAttribute="centerX" secondItem="Ba4-e8-5lz" secondAttribute="centerX" id="i0H-pe-JWi"/>
+                            <constraint firstItem="j4m-4U-mbv" firstAttribute="top" secondItem="NxP-zx-MW2" secondAttribute="bottom" constant="22" id="m5w-aO-49Y"/>
                             <constraint firstItem="4eM-7u-PZf" firstAttribute="top" secondItem="H0G-Je-d8O" secondAttribute="bottom" constant="50" id="yKB-fK-Sgg"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="UzY-3K-jJ4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="s8V-TM-otr">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="eaF-yl-nfz" id="lEa-A4-bt5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="detailTextField" destination="4eM-7u-PZf" id="hKb-kP-Ag1"/>
                         <outlet property="textView" destination="NxP-zx-MW2" id="9Do-9F-d35"/>
@@ -129,10 +146,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sa3-TN-AsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937" y="1109"/>
+            <point key="canvasLocation" x="937" y="1108.9999999999998"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2hc-HW-Kax"/>
+        <segue reference="kLn-9A-Bek"/>
     </inferredMetricsTieBreakers>
 </document>

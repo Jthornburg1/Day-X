@@ -8,7 +8,7 @@
 
 #import "DetailViewController.h"
 
-@interface DetailViewController () <UITextFieldDelegate>
+@interface DetailViewController () <UITextFieldDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *detailTextField;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
@@ -20,6 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+}
+
+-(void)dismissKeyboard {
+    [self.textView resignFirstResponder];
+    [self.detailTextField resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,13 +39,25 @@
     
     [textField resignFirstResponder];
     return YES;
-    
 }
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if([text isEqualToString:@"\n"])
+        [textView resignFirstResponder];
+    return YES;
+}
+
 - (IBAction)clearTextViewButton:(id)sender {
     
     self.textView.text = @"";
-    
 }
+- (IBAction)doneButtonTapped:(id)sender {
+    [self.textView resignFirstResponder];
+    [self.detailTextField resignFirstResponder];
+}
+
+
 /*
 #pragma mark - Navigation
 
