@@ -16,6 +16,8 @@
 		68FFDFF61AD8144B009F5D0A /* DayXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFDFF51AD8144B009F5D0A /* DayXTests.m */; };
 		872C91771AF81B5100B75862 /* ListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 872C91761AF81B5100B75862 /* ListTableViewDataSource.m */; };
 		872C917A1AF8238400B75862 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872C91791AF8238400B75862 /* DetailViewController.m */; };
+		878E18631AFAA73500EB61CE /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 878E18621AFAA73500EB61CE /* Entry.m */; };
+		878E18661AFAA8BA00EB61CE /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878E18651AFAA8BA00EB61CE /* EntryController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		872C91761AF81B5100B75862 /* ListTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewDataSource.m; sourceTree = "<group>"; };
 		872C91781AF8238400B75862 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		872C91791AF8238400B75862 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		878E18611AFAA73500EB61CE /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entry.h; path = ../Entry.h; sourceTree = "<group>"; };
+		878E18621AFAA73500EB61CE /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entry.m; path = ../Entry.m; sourceTree = "<group>"; };
+		878E18641AFAA8BA00EB61CE /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
+		878E18651AFAA8BA00EB61CE /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,10 @@
 				68FFDFDE1AD8144B009F5D0A /* AppDelegate.m */,
 				68FFDFE01AD8144B009F5D0A /* ListViewController.h */,
 				68FFDFE11AD8144B009F5D0A /* ListViewController.m */,
+				878E18611AFAA73500EB61CE /* Entry.h */,
+				878E18621AFAA73500EB61CE /* Entry.m */,
+				878E18641AFAA8BA00EB61CE /* EntryController.h */,
+				878E18651AFAA8BA00EB61CE /* EntryController.m */,
 				68FFDFE31AD8144B009F5D0A /* Main.storyboard */,
 				872C91781AF8238400B75862 /* DetailViewController.h */,
 				872C91791AF8238400B75862 /* DetailViewController.m */,
@@ -229,9 +239,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				878E18631AFAA73500EB61CE /* Entry.m in Sources */,
 				872C917A1AF8238400B75862 /* DetailViewController.m in Sources */,
 				68FFDFE21AD8144B009F5D0A /* ListViewController.m in Sources */,
 				68FFDFDF1AD8144B009F5D0A /* AppDelegate.m in Sources */,
+				878E18661AFAA8BA00EB61CE /* EntryController.m in Sources */,
 				872C91771AF81B5100B75862 /* ListTableViewDataSource.m in Sources */,
 				68FFDFDC1AD8144B009F5D0A /* main.m in Sources */,
 			);

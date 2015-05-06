@@ -34,6 +34,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="m55-1z-EKH" id="slo-MJ-5Ri"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="uoH-KD-xAN"/>
                                 </connections>
                             </tableView>
                         </subviews>

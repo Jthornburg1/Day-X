@@ -35,16 +35,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     
     [textField resignFirstResponder];
-    return YES;
-}
-
--(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
-{
-    if([text isEqualToString:@"\n"])
-        [textView resignFirstResponder];
     return YES;
 }
 
