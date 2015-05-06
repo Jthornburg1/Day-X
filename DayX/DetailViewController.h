@@ -11,7 +11,8 @@
 
 
 @interface DetailViewController : UIViewController
+
 @property (nonatomic,strong) Entry *entry;
 
-
+- (BOOL)updateWithEntry:(Entry*) entry;
 @end

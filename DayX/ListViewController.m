@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 
 }
 
@@ -39,8 +40,10 @@
     
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         DetailViewController *newViewController = [DetailViewController new];
+        newViewController = [segue destinationViewController];
         Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
         newViewController.entry = entry;
+        [newViewController updateWithEntry:entry];
         
     }
         

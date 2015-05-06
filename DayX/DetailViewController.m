@@ -24,7 +24,11 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
-    [self updateWithEntry:self.entry];
+//    [self updateWithEntry:self.entry];
+    
+    self.detailTextField.text = self.entry.title;
+    self.textView.text = self.entry.bodyText;
+    
     
 }
 
@@ -63,6 +67,8 @@
     //self.entry = [[EntryController sharedInstance] createEntryWithTittle:self.detailTextField.text withBodyText:self.textView.text];
 }
 - (BOOL)updateWithEntry:(Entry*) entry{
+    
+    self.entry = entry;
     self.detailTextField.text = entry.title;
     self.textView.text = entry.bodyText;
     
