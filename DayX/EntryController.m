@@ -31,7 +31,7 @@ dispatch_once(&onceToken, ^{
    // It should create a mutable copy of the entries array,
     //remove the entry that was passed in, and then re-set the controllers Entries array.
     NSMutableArray *entriesMutableArray = [[NSMutableArray alloc] initWithArray:self.entries];
-    [entriesMutableArray removeObject:entry];
+    [entriesMutableArray addObject:entry];
     self.entries = entriesMutableArray;
     
 }
@@ -42,7 +42,7 @@ dispatch_once(&onceToken, ^{
 //    -and then re-set the controller's Entries array.
 
     NSMutableArray *entriesMutableArray = [[NSMutableArray alloc] initWithArray:self.entries];
-    [entriesMutableArray addObject:entry];
+    [entriesMutableArray removeObject:entry];
     self.entries = entriesMutableArray;
 }
 

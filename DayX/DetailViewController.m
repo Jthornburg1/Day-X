@@ -24,6 +24,8 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+    [self updateWithEntry:self.entry];
+    
 }
 
 -(void)dismissKeyboard {
@@ -49,10 +51,24 @@
 }
 - (IBAction)saveButtonTapped:(id)sender {
     [self.textView resignFirstResponder];
-    EntryController *newEntry = [[EntryController alloc]init];
     
-    self.entry = [newEntry createEntryWithTittle:self.detailTextField.text withBodyText:self.textView.text];
+    if (self.entry) {
+        self.entry.title = self.detailTextField.text;
+        self.entry.bodyText = self.textView.text;
+    }
+    else {
+        self.entry = [[EntryController sharedInstance] createEntryWithTittle:self.detailTextField.text withBodyText:self.textView.text];
+    }
+       
+    //self.entry = [[EntryController sharedInstance] createEntryWithTittle:self.detailTextField.text withBodyText:self.textView.text];
 }
+- (BOOL)updateWithEntry:(Entry*) entry{
+    self.detailTextField.text = entry.title;
+    self.textView.text = entry.bodyText;
+    
+    return YES;
+}
+
 //- (IBAction)doneButtonTapped:(id)sender {
 //    [self.textView resignFirstResponder];
 //    [self.detailTextField resignFirstResponder];

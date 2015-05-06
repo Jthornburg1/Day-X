@@ -7,8 +7,10 @@
 //
 
 #import "ListViewController.h"
-
+#import "DetailViewController.h"
+#import "EntryController.h"
 @interface ListViewController () <UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -17,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,5 +29,23 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"viewEntry"]) {
+    
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetailViewController *newViewController = [DetailViewController new];
+        Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
+        newViewController.entry = entry;
+        
+    }
+        
+        
+}
+
 
 @end
