@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "EntryController.h"
 
 @interface DetailViewController () <UITextFieldDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *detailTextField;
@@ -46,10 +47,16 @@
     
     self.textView.text = @"";
 }
-- (IBAction)doneButtonTapped:(id)sender {
+- (IBAction)saveButtonTapped:(id)sender {
     [self.textView resignFirstResponder];
-    [self.detailTextField resignFirstResponder];
+    EntryController *newEntry = [[EntryController alloc]init];
+    
+    self.entry = [newEntry createEntryWithTittle:self.detailTextField.text withBodyText:self.textView.text];
 }
+//- (IBAction)doneButtonTapped:(id)sender {
+//    [self.textView resignFirstResponder];
+//    [self.detailTextField resignFirstResponder];
+//}
 
 
 /*

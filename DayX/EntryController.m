@@ -34,8 +34,6 @@ dispatch_once(&onceToken, ^{
     [entriesMutableArray removeObject:entry];
     self.entries = entriesMutableArray;
     
-    
-    
 }
 
 -(void)removeEntry:(Entry *)entry {
@@ -46,6 +44,16 @@ dispatch_once(&onceToken, ^{
     NSMutableArray *entriesMutableArray = [[NSMutableArray alloc] initWithArray:self.entries];
     [entriesMutableArray addObject:entry];
     self.entries = entriesMutableArray;
+}
+
+- (Entry *)createEntryWithTittle:(NSString *)title withBodyText:(NSString *)bodyText {
+    
+    Entry *newEntry = [[Entry alloc]init];
+    newEntry.title = title;
+    newEntry.bodyText = bodyText;
+    newEntry.timeStamp = [NSDate date];
+    [self addEntry:newEntry];
+    return newEntry;
 }
 
 @end

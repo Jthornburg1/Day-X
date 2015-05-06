@@ -89,7 +89,7 @@
                                     <constraint firstAttribute="width" constant="350" id="LpV-kf-LSS"/>
                                     <constraint firstAttribute="height" constant="245" id="NKV-Nj-Jti"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
@@ -115,9 +115,9 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="UzY-3K-jJ4">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="s8V-TM-otr">
+                        <barButtonItem key="rightBarButtonItem" title="Done" systemItem="save" id="s8V-TM-otr">
                             <connections>
-                                <action selector="doneButtonTapped:" destination="eaF-yl-nfz" id="lEa-A4-bt5"/>
+                                <action selector="saveButtonTapped:" destination="eaF-yl-nfz" id="LYg-kQ-QAC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
