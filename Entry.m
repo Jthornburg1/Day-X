@@ -15,6 +15,7 @@ static const NSString * bodyTextKey = @"bodyTextKey";
 static const NSString * timeStampKey = @"timeStampKey";
 
 
+
 - (instancetype) initEntryWithDictionary: (NSDictionary *)dict {
     self = [super init];
     if (self) {
@@ -28,7 +29,6 @@ static const NSString * timeStampKey = @"timeStampKey";
 - (NSDictionary *)dictionaryRepresentation {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     
-    
     if (self.title) {
         dict[titleKey] = self.title;
     }
@@ -36,7 +36,7 @@ static const NSString * timeStampKey = @"timeStampKey";
         dict[bodyTextKey] = self.bodyText;
     }
     if (self.timeStamp) {
-        dict[titleKey] = self.timeStamp;
+        dict[timeStampKey] = self.timeStamp;
     }
     return dict;
 }

@@ -61,6 +61,7 @@
     if (self.entry) {
         self.entry.title = self.detailTextField.text;
         self.entry.bodyText = self.textView.text;
+        [[EntryController  sharedInstance]save];
     }
     else {
         self.entry = [[EntryController sharedInstance] createEntryWithTittle:self.detailTextField.text withBodyText:self.textView.text];

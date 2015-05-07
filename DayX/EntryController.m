@@ -7,6 +7,10 @@
 //
 
 #import "EntryController.h"
+#import "Entry.h"
+
+//static const NSString * titleKey = @"titleKey";
+static NSString * const AllEntriesKey = @"AllEntriesKey";
 
 @interface EntryController ()
 @property (nonatomic, strong) NSArray *entries;
@@ -20,7 +24,8 @@
 static dispatch_once_t onceToken;
 dispatch_once(&onceToken, ^{
     sharedInstance = [[EntryController alloc]init];
-    sharedInstance.entries = [[NSArray alloc] init];
+    [sharedInstance loadFromPersistentStorage];
+    
 });
     return sharedInstance;
 }
@@ -33,6 +38,7 @@ dispatch_once(&onceToken, ^{
     NSMutableArray *entriesMutableArray = [[NSMutableArray alloc] initWithArray:self.entries];
     [entriesMutableArray addObject:entry];
     self.entries = entriesMutableArray;
+    [self saveToPersistentStorage];
     
 }
 
@@ -55,5 +61,55 @@ dispatch_once(&onceToken, ^{
     [self addEntry:newEntry];
     return newEntry;
 }
+
+- (void)saveToPersistentStorage {
+    NSMutableArray *temporaryMutableArray = [[NSMutableArray alloc] init];
+    
+    for ( Entry *entry in self.entries) {
+        
+        [temporaryMutableArray addObject:[entry dictionaryRepresentation]];
+    }
+   
+    [[NSUserDefaults standardUserDefaults] setObject:temporaryMutableArray forKey:AllEntriesKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)save {
+    
+    [self saveToPersistentStorage];
+    
+}
+
+#pragma mark- dont really understand here
+
+- (void)loadFromPersistentStorage {
+    
+    NSArray *entryDictionaries = [[NSUserDefaults standardUserDefaults] objectForKey:AllEntriesKey];
+    self.entries = entryDictionaries;
+    
+    NSMutableArray *entries = [NSMutableArray new];
+    for (NSDictionary *entry in entryDictionaries) {
+        [entries addObject:[[Entry alloc] initEntryWithDictionary:entry]];
+    }
+    self.entries = entries;
+}
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
