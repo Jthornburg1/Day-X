@@ -13,4 +13,12 @@
 @property (nonatomic,strong) NSString *bodyText;
 @property (nonatomic,strong) NSDate *timeStamp;
 
+
+
+- (instancetype) initEntryWithDictionary: (NSDictionary *)dict;
+
+- (NSDictionary *)dictionaryRepresentation;
+
+
+
 @end

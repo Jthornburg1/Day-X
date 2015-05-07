@@ -50,11 +50,13 @@
 }
 
 - (IBAction)clearTextViewButton:(id)sender {
-    
+     
     self.textView.text = @"";
 }
 - (IBAction)saveButtonTapped:(id)sender {
     [self.textView resignFirstResponder];
+    [self.detailTextField resignFirstResponder];
+     [self.navigationController popViewControllerAnimated:YES];
     
     if (self.entry) {
         self.entry.title = self.detailTextField.text;
